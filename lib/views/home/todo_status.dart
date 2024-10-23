@@ -9,7 +9,6 @@ class TodoStatus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
-      padding: EdgeInsets.symmetric(horizontal: 12.0),
       height: 144,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0),
