@@ -30,6 +30,15 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: AppColors.black,
+        shape: CircleBorder(),
+        child: Icon(
+          Icons.add,
+          color: AppColors.white,
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(items: [
         BottomNavigationBarItem(icon: Icon(Icons.list), label: "할 일"),
         BottomNavigationBarItem(icon: Icon(Icons.history), label: "히스토리")
