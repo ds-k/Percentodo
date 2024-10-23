@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percentodo/home.dart';
+import 'package:percentodo/theme/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        fontFamily: "Pretendard",
         useMaterial3: true,
+        scaffoldBackgroundColor: AppColors.cream,
       ),
       home: Home(),
     );
