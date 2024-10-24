@@ -53,7 +53,7 @@ class TodoWidget extends StatelessWidget {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                      "${DateFormat('a h시 mm분').format(todo.dueDate)} 까지",
+                      "${DateFormat('a h시 mm분', 'ko').format(todo.dueDate)} 까지",
                       style: TextStyle(
                           color: AppColors.lightGray,
                           fontSize: 14,

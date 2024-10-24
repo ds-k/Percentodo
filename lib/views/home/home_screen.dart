@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:percentodo/theme/colors.dart';
 import 'package:percentodo/views/home/todo_list.dart';
 import 'package:percentodo/views/home/todo_status.dart';
+import 'package:intl/intl.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,14 +17,17 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                height: 50,
+                height: 56,
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: Row(
                   children: [
                     SvgPicture.asset("assets/images/logo-small.svg"),
                     SizedBox(width: 12),
                     Text(
-                      "2024년 10월 23일 (수)",
+                      DateFormat(
+                        'yyyy년 MM월 dd일 (E)',
+                        "ko",
+                      ).format(DateTime.now()),
                       style:
                           TextStyle(fontWeight: FontWeight.w800, fontSize: 18),
                     )
@@ -37,7 +41,21 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.8,
+                  child: Column(
+                    children: [
+                      Text("왜 안늘어나"),
+                    ],
+                  ),
+                );
+              });
+        },
         backgroundColor: AppColors.black,
         shape: CircleBorder(),
         child: Icon(

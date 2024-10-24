@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:percentodo/theme/colors.dart';
 import 'package:percentodo/views/home/home_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  await initializeDateFormatting('ko');
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
