@@ -43,6 +43,7 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
+              // isScrollControlled: true,  해당 옵션을 키면 제한을 풀 수 있으나 권장하지는 않는다.
               context: context,
               builder: (context) {
                 return Container(
