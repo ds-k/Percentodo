@@ -28,9 +28,9 @@ class TodoWidget extends StatelessWidget {
         children: [
           Container(
             width: 20,
+            height: 20,
             margin: EdgeInsets.only(right: 12),
             // decoration: BoxDecoration(color: Colors.red),
-            // this.isCompleted 변수를 사용할 곳
             child: Checkbox(
                 value: todo.isCompleted,
                 onChanged: (bool? value) {

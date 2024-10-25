@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
-              // isScrollControlled: true,  해당 옵션을 키면 제한을 풀 수 있으나 권장하지는 않는다.
+              // isScrollControlled: true,
               context: context,
               builder: (context) {
                 return Container(
@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.8,
                   child: Column(
                     children: [
-                      Text("왜 안늘어나"),
+                      Text("입력창"),
                     ],
                   ),
                 );
@@ -64,7 +64,8 @@ class HomeScreen extends StatelessWidget {
           color: AppColors.white,
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: [
+      bottomNavigationBar:
+          BottomNavigationBar(backgroundColor: AppColors.cream, items: [
         BottomNavigationBarItem(icon: Icon(Icons.list), label: "할 일"),
         BottomNavigationBarItem(icon: Icon(Icons.history), label: "히스토리")
       ]),
