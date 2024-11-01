@@ -6,8 +6,8 @@ import 'package:percentodo/views/home/home_screen.dart';
 import 'firebase_options.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await initializeDateFormatting('ko');
-
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

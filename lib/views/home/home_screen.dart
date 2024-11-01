@@ -4,6 +4,7 @@ import 'package:percentodo/theme/colors.dart';
 import 'package:percentodo/views/home/todo_list.dart';
 import 'package:percentodo/views/home/todo_status.dart';
 import 'package:intl/intl.dart';
+import 'package:percentodo/views/home/todo_submit.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -29,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                         "ko",
                       ).format(DateTime.now()),
                       style:
-                          TextStyle(fontWeight: FontWeight.w800, fontSize: 18),
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
                     )
                   ],
                 ),
@@ -43,18 +44,10 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
-              // isScrollControlled: true,
+              isScrollControlled: true,
               context: context,
               builder: (context) {
-                return Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.8,
-                  child: Column(
-                    children: [
-                      Text("입력창"),
-                    ],
-                  ),
-                );
+                return TodoSubmitWidget();
               });
         },
         backgroundColor: AppColors.black,

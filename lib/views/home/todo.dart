@@ -34,6 +34,7 @@ class TodoWidget extends StatelessWidget {
             child: Checkbox(
                 value: todo.isCompleted,
                 onChanged: (bool? value) {
+                  // TODO : 변경 로직 작성
                   print("isCompleted 변경 로직 작성하세요");
                   // isCompleted -> true로 변경할 수 있도록 하는 로직 작성
                 }),
