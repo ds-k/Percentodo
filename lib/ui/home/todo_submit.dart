@@ -17,7 +17,7 @@ class TodoSubmitWidget extends StatelessWidget {
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
             height: 66,
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percentodo/theme/colors.dart';
-import 'package:percentodo/views/home/todo.dart';
+import 'package:percentodo/ui/home/todo.dart';
 
 class TodoList extends StatelessWidget {
   TodoList({super.key});

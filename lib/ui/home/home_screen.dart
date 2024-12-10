@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:percentodo/theme/colors.dart';
-import 'package:percentodo/views/home/todo_list.dart';
-import 'package:percentodo/views/home/todo_status.dart';
+import 'package:percentodo/ui/home/todo_list.dart';
+import 'package:percentodo/ui/home/todo_status.dart';
 import 'package:intl/intl.dart';
-import 'package:percentodo/views/home/todo_submit.dart';
+import 'package:percentodo/ui/home/todo_submit.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar:
-          BottomNavigationBar(backgroundColor: AppColors.cream, items: [
+          BottomNavigationBar(backgroundColor: AppColors.cream, items: const [
         BottomNavigationBarItem(icon: Icon(Icons.list), label: "할 일"),
         BottomNavigationBarItem(icon: Icon(Icons.history), label: "히스토리")
       ]),
